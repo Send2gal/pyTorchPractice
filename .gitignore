@@ -1,0 +1,4 @@
+MNIST/*
+runs/*
+.vscode/settings.json
+t.py
