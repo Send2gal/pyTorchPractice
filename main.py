@@ -86,13 +86,13 @@ def testing(net, writer):
                 if not torch.argmax(i) == y[idx]:
                     print("ai think ", torch.argmax(i), "real value ", y[idx])
                     loss += 1
-                    writer.add_scalar('Loss/test', loss/total, i)
+                    writer.add_scalar('Loss/test', loss/total+1, i)
                     # plt.imshow(x[idx].view(28, 28))
                     # plt.show()
                     # sleep(3)
                 if torch.argmax(i) == y[idx]:
                     correct += 1
-                    writer.add_scalar('Accuracy/test', correct/total, i)
+                    writer.add_scalar('Accuracy/test', correct/total+1, i)
                 total += 1
 
     print("Accuracy: ", round(correct / total, 3), "from: ", total)
